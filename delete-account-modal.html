@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>delete-account-modal</title>
+    <link href="css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="vendors/fontawesome/web-fonts-with-css/css/fontawesome.css">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id="id_open">
+                Показать
+            </button>
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="join-modal">
+                        <div class="modal-body">
+                            <h5 class="modal-title" id="modal">Delete your account</h5>
+                            <button type="button" class="close join-modal-btn" data-dismiss="modal" aria-label="Close">
+                                <span class="join-modal-delite" aria-hidden="true">&times;</span>
+                            </button>
+                            <p class="join-modal-text">Are you sure you want to delete your account?
+                            </p>
+                        </div>
+                        <div>
+                            <button type="button" class="btn delete-account-btn" data-dismiss="modal">Delete</button>
+                            <button type="button" class="btn delete-account-btn delete-account-btn-cancel">Cancel</button>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<script src="vendors/jquery/dist/jquery.js"></script>
+<script src="vendors/bootstrap/dist/js/bootstrap.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#id_open').click();
+    })
+</script>
+</body>
+</html>

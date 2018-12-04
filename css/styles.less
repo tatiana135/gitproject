@@ -1,12 +1,13 @@
 body {
   width: 100%;
+  /*
   max-width: 1440px;
   min-width: 270px;
+  */
   margin: 0 auto;
-  font-family: "SF UI Display";
   cursor: default;
+  font-family: OpenSans-Regular SansSerif;
 }
-
 div {
   box-sizing: border-box;
 }
@@ -14,7 +15,7 @@ div {
 .br() {
   border: @br-cl 1px solid;
 }
-.text-form() {
+.text-form {
   font-size: 14px;
   font-weight: 400;
   color: #767676;
@@ -23,8 +24,11 @@ div {
   width: 410px;
   height: 50px;
   .br();
+  border-radius: 0;
 }
-
+.form-group-style {
+  margin-bottom: 0;
+}
 .btn-form {
   width: 410px;
   height: 50px;
@@ -35,26 +39,120 @@ div {
   color: white;
   text-transform: uppercase;
 }
-
   .br() {
   width: 410px;
   height: 50px;
   margin-bottom: 14px;
 }
+::-webkit-input-placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  color:#b6b6b6;
+}
+::-moz-placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  color:#b6b6b6;
+}
+:-moz-placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  color:#b6b6b6;
+}
+:-ms-input-placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  color:#b6b6b6;
+}
+input {
+  padding-left: 8px;
+}
+
+/*headre*/
+
 header {
-  width: 1440px;
+  width: 100%;
   height: 90px;
-  margin: auto;
   border-bottom: @br-cl 1px solid;
-  padding-top: 29px;
-  padding-left: 75px;
+  padding: 29px 61px 28px 60px;
   margin-bottom: 59px;
   img {
     width: 50px;
     height: 33px;
   }
 }
-.sign-up__container {
+a.header-link {
+  font-size: 16px;
+  font-weight: 700;
+  color: #767676;
+  text-transform: uppercase;
+}
+a.header-link:last-child {
+  margin-right: 0;
+}
+a.header-link:first-child {
+
+}
+a.header-link:hover {
+  color: #767676;
+}
+a.current-page {
+  color: #2967ee;
+}
+.header-sign-out {
+  display: inline-block;
+  margin-left: 93px;
+}
+.header-sign-out-text, .header-sign-out-img {
+  float: left;
+}
+.header-sign-out-img {
+  width: 20px;
+  height: 18px;
+  margin-top: 5px;
+}
+.header-sign-out-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: #b6b6b6;
+  margin-right: 9px;
+  margin-top: 8px;
+}
+
+
+
+
+.checkbox-style {
+  margin-top: 25px;
+}
+.checkbox {
+	position:relative;
+	padding-left: 30px;
+  margin-top: 10px;
+}
+.checkbox input[type=checkbox] {
+	display:none;
+}
+.checkbox label:after {
+	content:'';
+	display:block;
+	height:14px;
+	width:14px;
+	outline:1px solid #939598;
+	position:absolute;
+	top:0;
+	left:0;
+}
+.checkbox input[type=checkbox]:checked + label:after {
+	outline:1px solid #939598;
+	border:1px solid #767676;
+	width:20px;
+	height:20px;
+	background-color:#767676;
+}
+/*sign-up*/
+.sign-up__container, .sign-in__container,
+.change-passvord__container {
   width: 410px;
   height: auto;
   margin: auto;
@@ -64,6 +162,13 @@ header {
     line-height: 36px;
     color: #0e0e0e;
     margin-bottom: 9px;
+  }
+  h3 {
+     font-size: 36px;
+    font-weight: 700;
+    line-height: 45px;
+    color: #0e0e0e;
+    margin-bottom: 25px;
   }
 }
 .sign-up__text {
@@ -79,12 +184,8 @@ header {
   font-size: 16px;
   font-weight: 600;color: #0e0e0e;
 }
-.checkbox {
-	display: none;
-}
 .checkbox-custom {
 	position: relative;
-
 	width: 20px;
 	height: 20px;
 	border: 2px solid #ccc;
@@ -98,19 +199,627 @@ header {
   width: 380px;
   .text-form();
   padding-bottom: 12px;
-  .text-form();
+  margin-top: -5px;
 }
 .btn-form-sign-up {
   margin-bottom: 100px;
+  padding: 15px 171px 16px 171px;
+  --white: 410px;
+  font-size: 16px;
 }
+/*Sign in*/
+.sign-in__container {
+  h2 {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 36px;
+    color: #0e0e0e;
+  }
+}
+.sign-in__text {
+  font-size: 16px;
+  font-weight: 400;
+  color: #404040;
+  margin-bottom: 27px;
+}
+.sign-in-link {
+  font-size: 12px;
+  font-weight: 400;
+  color: #767676;
+  margin-left: 212px;
+  text-decoration: underline;
+}
+a.sign-in-link:hover {
+  color: #767676;
+}
+.sign-in-label {
+  color: #586270;
+  margin-top: 5px;
+}
+.checkbox-custom-sign-in {
+  .checkbox-custom;
+  background: #2967ee;
+  border: none;
+  float: left;
+  margin-right: 10px;
+}
+.btn-form-sign-in {
+  width: 190px;
+  height: 50px;
+  background: #767676;
+  color: white;
+  float: right;
+  margin-top: -18px;
+  margin-left: 94px;
+  padding: 12px 65px 16px 64px;
+}
+.form-group-sign-in {
+  display: inline-block;
+  margin-bottom: 0;
+  margin-top: 26px;
+}
+.label-sign-in {
+  float: left;
+}
+.not-member {
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 86px;
+}
+.not-member-text, .not-member-link {
+  float: left;
+  margin-right: 3px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #586270;
+}
+a.not-member-link {
+  color: #2967ee;
+}
+/*Account*/
+.account-placeholder::-webkit-input-placeholder {
+  padding-left: 18px;
+  font-size: 16px;
+  font-weight: 700;
+  color:#0e0e0e;
+}
+.account-password {
+  margin-bottom: 26px;
+  display: inline-block;
+}
+.btn-account {
+  margin-bottom: 35px;
+  text-align: center;
+  padding: 15px 186px 16px 185px;
+}
+.account-delete-text {
+  float: left;
+  font-size: 12px;
+  font-weight: 400;
+  color: #798392;
+  margin-right: 11px;
+}
+.account-delete-link {
+  float: left;
+  margin-left: -7px;
+   margin-top: -5px;
+}
+.account-delete-link a {
+  font-size: 12px;
+  font-weight: 400;
+  color: #798392;
+  text-decoration: underline;
+}
+.account-password-link {
+  margin-top: -2px;
+}
+.account-password-link a {
+  text-decoration: underline;
+  font-size: 14px;
+  font-weight: 400;
+}
+.account-password-text {
+  font-size: 14px;
+  color: #798832;
+  margin-right: 11px;
+}
+.account-password-delete {
+  margin-bottom: 154px;
+}
+/*footer*/
 footer {
   height: 149px;
   border-top: @br-cl 1px solid;
   padding-top: 34px;
-  padding-left: 74px;
+  padding-left: 59px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #767676;
 }
 .sub {
   color: #767676;
 }
+.footer-email {
+  a {
+    font-size: 14px;
+    font-weight: 400;
+    color: #767676;
+    text-decoration: underline;
+    margin-left: -25px;
+  }
+}
+.footer-icon {
+  margin-left: 60px;
+}
+a.footer-icon-style {
+  margin-right: 20px;
+}
+/*dashboard*/
+.dachboard-header {
+  margin-bottom: 0;
+}
+.dachboard-padding-style {
+  padding-top: 25px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.dachboard-tittle {
+  font-size: 26px;
+    font-weight: 600;
+    color: #0e0e0e;
+}
+section {
+  width: 100%;
+  background: #f6f6f6;
+  padding-bottom: 100px;
+}
+.dachboard {
+  width: 850px;
+  margin: auto;
+}
+.dachboard-tittle {
+  height: 69px;
+  padding-bottom: 19px;
+}
+.dachboard-welcome {
+  margin-top: 51px;
+}
+.dachboard-tittle h2 {
+   font-size: 40px;
+  line-height: 50px;
+  color: #0e0e0e;
+  margin-left: -15px;
+}
+.verify {
+  margin-left: -15px;
+  width: 850px;
+  height: 60px;
+  margin-bottom: 30px;
+  display: inline-block;
+  background-image: radial-gradient(circle 852px at 34.71% 350%, #2cb2fb 0%, #0646ff 100%);
+}
+.verify-text {
+  padding-top: 9px;
+  padding-left: 30px;
+  width: 550px;
+  height: 39px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  float: left;
+}
+.verify-btn {
+  margin-right: 5px;
+  margin-top: 5px;
+}
+.verify-btn-style {
+  float: right;
+  color: #ffffff;
+  width: 120px;
+  height: 50px;
+  padding: 15px 36px 16px 36px;
+  background: #2cb2f6;
+  opacity: 15%;
+  border: none;
+  a {
+    color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  }
+}
+.tokens-style {
+  margin-bottom: 30px;
+}
+.bye-tokens {
+  width: 628px;
+  margin-left: -15px;
+  background: #ffffff;
+  height: 172px;
+  border: #2967ee 4px solid;
+  padding: 20px 47px 20px 30px;
+  box-shadow: 0 16px 20px rgba(41, 103, 238, 0.15);
+}
+.invest {
+  display: inline-block;
+}
+.invest-tittle-margin {
+  margin-bottom: -30px;
+}
+.invest-sum {
+  float: left;
+  width: 165px;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 60px;
+  padding-left: 60px;
+  color: #0e0e0e;
+  height: 50px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: #bcbcbc 2px solid;
+  margin-right: 12px;
+}
+.invest-currency {
+  float: left;
+  font-size: 20px;
+  font-weight: 600;
+  color: #0e0e0e;
+  width: 45px;
+  height: 50px;
+  padding-top: 22px;
+  margin-right: 10px;
+}
+.invest-btn {
+  width: 120px;
+  height: 50px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 13px 34px 16px 31px;
+  text-transform: uppercase;
+  background-image: radial-gradient(circle 130px at 462.5% 740%, #2cb2fb 0%, #0646ff 100%);
+}
+.invest-sum-total {
+  font-size: 18px;
+  font-weight: 400;
+  color: #767676;
+  text-transform: uppercase;
+  padding-left: 112px;
+  padding-top: 5px;
+}
+.price {
+  height: 132px;
+  width: 190px;
+  margin-left: -15px;
+  padding-left: 27px;
+  padding-top: 5px;
+  margin-top: -2px;
+  border-left: #d5d5d5 2px solid;
+}
+.price-text {
+  font-size: 15px;
+  font-weight: 600;
+  color: #0e0e0e;
+  margin-bottom: 0;
+}
+.balans {
+  background: #ffffff;
+  width: 182px;
+  margin-left: 87px;
+  height: 172px;
+  border: #2967ee 4px solid;
+  padding: 23px 20px 66px 28px;
+}
+.balans-text {
+  font-size: 14px;
+  font-weight: 400;
+  color: #767676;
+  margin-bottom: 0;
+}
+.balans-text-big {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0e0e0e;
+}
+.balans-sum {
+  font-size: 30px;
+  font-weight: 600;
+  color: #0e0e0e;
+  margin-bottom: 0;
+  margin-top: -5px;
+}
+.balans-img {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #b6b6b6;
+  margin-left: 58px;
+  margin-top: -37px;
+}
+.balans-text-question {
+  color: white;
+  margin-left: 63px;
+  margin-top: -19px;
+  font-size: 14px;
+}
+.news {
+  height: 74px;
+  background: #ffffff;
+  width: 850px;
+  margin-left: -15px;
+  padding-top: 20px;
+  padding-left: 30px;
+  padding-bottom: 17px;
+}
+.news-text {
+  display: inline-block;
+  background: #ffffff;
+  height: 146px;
+  width: 425px;
+  margin-left: -15px;
+  margin-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.news-text-date {
+  float: left;
+  width: 39px;
+  margin-top: 3px;
+  margin-right: 18px;
+  p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #767676;
+    margin-bottom: 45px;
+  }
+}
+p.column-right {
+  margin-bottom: 20px;
+}
+.news-text-link {
+  float: right;
+  width: 300px;
+  height: 59px;
+  margin-bottom: 5px;
+}
+.dachboard-link {
+   font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #404040;
+    text-decoration: underline;
+}
+.column-right-link {
+  margin-bottom: 4px;
+  height: 36px;
+}
+.goals {
+  width: 850px;
+  height: 620px;
+  background: white;
+  margin-left: -15px;
+  margin-bottom: 30px;
+  padding: 25px 10px 29px 30px;
+  p {
+    margin-bottom: -15px;
+  }
+  h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #0e0e0e;
+    margin-bottom: 19px;
+  }
+  span {
+    font-weight: 400;
+    color: #b6b6b6;
+  }
+}
+.goals-container {
+  display: inline-block;
+  width: 850px;
+  margin-bottom: 10px;
+}
+.goals-container-img {
+  float: left;
+  img {
+    width: 20px;
+    height: 20px;
+  }
+  margin-right: 16px;
+  margin-left: 2px;
+}
+.goals-container-goal {
+  float: left;
+  margin-top: 3px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #404040;
+}
+.goals-text {
+  display: inline-block;
+  margin-left: 26px;
+  width: 653px;
+  height: 88px;
+  margin-bottom: 21px;
+}
+.goals-text li {
+  font-size: 14px;
+  font-weight: 400;
+  color: #767676;
+}
+.goals-btn {
+  width: 790px;
+  height: 50px;
+  font-size: 14px;
+  padding: 15px 267px 16px 267px;
+  background: #f6f6f6;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  a {
+    font-size: 14px;
+  font-weight: 600;
+  color: #767676;
+  }
+}
+.goala-btn-link a {
+  font-size: 14px;
+  font-weight: 600;
+  color: #767676;
+}
+.dashboard-help {
+  height: 74px;
+  width: 850px;
+  background: white;
+  margin-left: -15px;
+  .dachboard-padding-style;
+}
+.dashboard-help-link {
+  width: 425px;
+  height: 96px;
+  margin-left: -15px;
+  padding-left: 30px;
+  background: white;
+  padding-right: 30px;
+  margin-bottom: 30px;
+}
+.help-link-style {
+  margin-bottom: 10px;
+}
+.dashboard-team {
+  height: 80px;
+  width: 850px;
+  background: white;
+  margin-left: -15px;
+  .dachboard-padding-style;
+}
+.dashboard-card {
+  height: 200px;
+  width: 284px;
+  margin-left: -15px;
+  background: white;
+  a {
+    margin-left: 98px;
+  }
+}
+.card-style {
+  width: 90px;
+  height: 100px;
+  margin: auto;
+}
+.card-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: #0e0e0e;
+  text-align: center;
+}
+.dashboard-card-text {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 25px;
+  color: #767676;
+  text-align: center;
+  width: auto;
+  margin-top: -10px;
+}
+.icon {
+  width: 284px;
+  height: 95px;
+  text-align: center;
+  background: white;
+}
+.icon-style {
+  width: 20px;
+  height: 20px;
+}
+.investor {
+  margin-left: -15px;
+  padding-right: 30px;
+  height: 121px;
+  width: 850px;
+  background: #ffffff;
+  margin-top: 30px;
+  .dachboard-padding-style
+}
+.investor-text {
+  margin-top: -43px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+  color: #404040;
+}
+.investor-link-background {
+  background: white;
+  height: 89px;
+}
+.investor-link {
+  height: 89px;
+  padding-left: 15px;
+}
+.investor-link-margin {
+  margin-bottom: 10px;
+}
+/*Modal style*/
+/*change-passvord-modal*/
+
+.change-passvord-btn {
+  margin-top: -15px;
+  padding: 13px 170px 16px 170px;
+}
+.change-passvord__container h2 {
+   margin-bottom: 20px;
+}
+/*join-modal, reset-passvord-modal*/
+.join-modal h5{
+  font-size: 26px;
+  font-weight: 600;
+  color: #0e0e0e;
+}
+.join-modal {
+  padding: 15px 0 10px 20px;
+  width: 560px;
+  height: 300px;
+  background: white;
+  border: black 60px solid;
+}
+.join-modal-delite {
+  font-size: 46px;
+}
+.join-modal-btn {
+  margin-top: -65px;
+}
+.join-modal-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+  color: #040404;
+}
+/*delete-account-modal*/
+.delete-account-btn {
+  width: 180px;
+  height: 48px;
+  background: #ff003d;
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  padding: 18px 53px 16px 53px;
+  border-radius: 1px;
+  margin-top: -32px;
+  margin-left: 16px;
+}
+.delete-account-btn-cancel {
+    background: white;
+  color: #2976ee;
+  margin-left: -3px;
+  }
+
+
+
+
 
 
